@@ -10,6 +10,7 @@ public:
 	int node1; // 출발 노드 
 	int node2; // 도착 노드 
 	int weight; // 가중치 
+	edge(){}
 	edge(int a, int b, int w) { // 생성자 
 		this->node1 = a;
 		this->node2 = b;	
@@ -56,7 +57,7 @@ int main(int argc, char** argv) {
 vector< pair<int, int> > kruskal (priority_queue<edge> edges, int V) {
 	vector< pair<int, int> > mcst; // minimum cost spanning tree, 최소 비용 신장 트리 
 	int i; // 반복자 
-	edge a(0, 0, 0);
+	edge a;
 	int change;
 	
 	while(!edges.empty()) { 
@@ -78,4 +79,4 @@ vector< pair<int, int> > kruskal (priority_queue<edge> edges, int V) {
 		cout << "no mcst" << endl;
 	
 	return mcst;
-} 
+}

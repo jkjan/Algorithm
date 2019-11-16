@@ -1,4 +1,4 @@
-# Project: Kruskal Algorithm
+# Project: Kruskal's Algorithm
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
@@ -6,9 +6,9 @@ CC       = gcc.exe
 WINDRES  = windres.exe
 OBJ      = "Kruskal's\ Algorithm.o"
 LINKOBJ  = "Kruskal's Algorithm.o"
-LIBS     = -L"C:/Utility/Dev C++/Dev-Cpp/MinGW64/lib" -L"C:/Utility/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
-INCS     = -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/include" -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
-CXXINCS  = -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/include" -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Utility/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+LIBS     = -L"D:/Utility/Dev C++/Dev-Cpp/MinGW64/lib" -L"D:/Utility/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/include" -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/include" -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"D:/Utility/Dev C++/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = "Kruskal's Algorithm.exe"
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 

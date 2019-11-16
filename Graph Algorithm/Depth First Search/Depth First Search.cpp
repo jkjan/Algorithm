@@ -11,20 +11,20 @@ void dfs(int v);
 
 int main(int argc, char** argv) {
 	int V, E; // 노드의 개수, 엣지의 개수 
-	int u, v, w; // 출발 노드, 도착 노드, 가중치. 단, 가중치는 이 경우엔 쓰이지 않는다. 
+	int u, v; // 출발 노드, 도착 노드
 	int i; // 반복자 
-	ifstream fp("../graph_input.txt");
+	ifstream fp("../graph_input3.txt");
 	fp >> V >> E;
 	
 	fill_n(visited, 1001, false);
 	
 	for (i = 0; i < E; i++) { // 그래프의 입력 
-		fp >> u >> v >> w;
+		fp >> u >> v;
 		graph[u].push_back(v);
 		graph[v].push_back(u);
 	}
 	
-	dfs(1);
+	dfs(0);
 	
 	return 0;
 }

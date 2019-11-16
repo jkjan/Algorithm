@@ -11,7 +11,6 @@ class edge { // 우선순위 큐에 추가될 엣지 클래스
 		int from;
 		int to;
 		int weight;
-		
 		edge(int from, int to, int weight) {
 			this->from = from;
 			this->to = to;
