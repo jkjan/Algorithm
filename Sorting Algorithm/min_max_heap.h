@@ -1,8 +1,9 @@
 #ifndef INC_7662_MIN_MAX_HEAP_H
 #define INC_7662_MIN_MAX_HEAP_H
 #include <cmath>
-#include <climits>
+#include <limits>
 #define MAX_SIZE 1048576
+
 template<typename T>
 class minMaxHeap {
 private:
@@ -41,7 +42,7 @@ private:
 
     int smallestChild(int i, bool isMin) {
         bool(*compare)(T, T) = isMin ? min : max;
-        T s = isMin ? LLONG_MAX : LLONG_MIN;
+        T s = isMin ? std::numeric_limits<T>::max() : std::numeric_limits<T>::min();
         int si = -1;
         int i2 = i*2;
         int i4 = i*4;
@@ -56,7 +57,8 @@ private:
             int child = smallestChild(i, isMin);
             if (level(child) - level(i) == 2 && child != -1) {
                 if (compare(this->heap[child], this->heap[i])) {
-                    std::swap(this->heap[child], this->heap[i]);            int parent = child / 2;
+                    std::swap(this->heap[child], this->heap[i]);
+                    int parent = child / 2;
                     if (compare(this->heap[parent], this->heap[child]))
                         std::swap(this->heap[parent], this->heap[child]);
                     pushDownImpl(child, isMin);
@@ -96,7 +98,9 @@ private:
     }
 
 public:
-    minMaxHeap() : size(0), heap(new T[MAX_SIZE]) {}
+    minMaxHeap() : size(0), heap(new T[MAX_SIZE]) {
+    }
+
     ~minMaxHeap() {
         delete [] heap;
     }
